@@ -14,5 +14,6 @@ public class bankdemo {
 
         System.out.printf("Balance after interest: Rs. %.2f%n",
                           updatedBalance);
+                          
     }
 }
