@@ -1,3 +1,4 @@
+// exp 5
 import java.util.Scanner;
 class payment{
     double amount;
