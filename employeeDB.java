@@ -1,3 +1,4 @@
+// exp 1
 class employee{
         String name;
         int emp_id,age;
