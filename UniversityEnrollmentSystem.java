@@ -20,12 +20,13 @@ class Student{
                 System.out.println("Total Enrolled Students are " + enrolledCount);
         }
 
-        void displayPerformance(){
-                int min = (m1 < m2) ? ((m1 < m3) ? m1 : m3) : ((m2 < m3) ? m2 : m3);
+       void displayPerformance() {
+                int min = Math.min(m1, Math.min(m2, m3));
                 double bestTwoAvg = (m1 + m2 + m3 - min) / 2.0;
 
-                System.out.printf("Student: %s | Marks: [%d, %d, %d] | Best 2 Avg: %.2f\n", name, m1, m2, m3, bestTwoAvg);
-        }
+                System.out.printf("Student: %s | Marks: [%d, %d, %d] | Best 2 Avg: %.2f\n",
+                      name, m1, m2, m3, bestTwoAvg);
+}
 }
 
 public class UniversityEnrollmentSystem{
