@@ -72,14 +72,14 @@ public class myownautoshop {
     public static void main(String[] args) {
         Sedan sedan = new Sedan(120, 20000, "Red", 18);
 
-        Ford ford1 = new Ford(150, 30000, "Black", 2024, 2000);
-        Ford ford2 = new Ford(140, 25000, "White", 2023, 1500);
+        Ford ford = new Ford(150, 30000, "Black", 2024, 2000);
+        Truck truck = new Truck(120, 30000, "Blue", 2500);
 
         Car car = new Car(100, 15000, "Blue");
 
         System.out.printf("Sedan Sale Price: %.2f%n", sedan.getSalePrice());
-        System.out.printf("Ford 1 Sale Price: %.2f%n", ford1.getSalePrice());
-        System.out.printf("Ford 2 Sale Price: %.2f%n", ford2.getSalePrice());
+        System.out.printf("Ford  Sale Price: %.2f%n", ford.getSalePrice());
+        System.out.printf("Truck Sale Price: %.2f%n", truck.getSalePrice());
         System.out.printf("Car Sale Price: %.2f%n", car.getSalePrice());
     }
 }
