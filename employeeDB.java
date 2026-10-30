@@ -1,4 +1,6 @@
 // exp 1
+import java.util.Scanner; 
+
 class employee{
         String name;
         int emp_id,age;
@@ -20,26 +22,59 @@ class employee{
 
 public class employeeDB{
        public static void main(String[] args){
-       employee[] e={
-new employee("rahul",101,"sales",25,"executive",30000),
-new employee("priya",102,"sales",28,"manager",45000),
-new employee("amit",103,"purchase",35,"manager",60000),
-new employee("neha",104,"purchase",29,"manager",55000),
-new employee("kiran",105,"sales",26,"executive",35000)};
+        Scanner sc = new Scanner(System.in);
+
+       employee[] e=new employee[5];
+
+       for(int i=0; i<5;i++){
+        System.out.println("Enter details of employee " + (i + 1));
+
+        System.out.print("Name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Employee ID: ");
+        int id = Integer.parseInt(sc.nextLine());
+
+        System.out.print("Department: ");
+        String dept = sc.nextLine();
+
+        System.out.print("Age: ");
+        int age = Integer.parseInt(sc.nextLine());
+
+        System.out.print("Designation: ");
+        String des = sc.nextLine();
+
+        System.out.print("Salary: ");
+        double salary = Double.parseDouble(sc.nextLine());
+
+        e[i] = new employee(name, id, dept, age, des, salary);
+
+       }
+
+
+
        for (employee x:e)
                x.display();
+
        double total=0;
+
        for(employee x:e)
                if(x.department.equals("sales"))
                        total +=x.salary;
        System.out.println("sales salary="+total);
 
        employee max=null;
+
        for(employee x:e)
                if(x.department.equals("purchase")&&x.designation.equals("manager")&&(max==null || x.salary>max.salary))
                        max=x;
-
-       System.out.println("highest paid purchase manager:");
-       max.display();
+        
+       if(max!=null){
+        System.out.println("highest paid purchase manager:");
+        max.display();
+       }else{
+        System.out.println("no purchase manager found");
        }
+       sc.close();
+}
 }
