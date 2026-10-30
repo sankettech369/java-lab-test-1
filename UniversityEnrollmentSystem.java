@@ -1,4 +1,6 @@
 // exp 3
+import java.util.Scanner;
+
 class Student{
         static int enrolledCount=0;
         final String name;
@@ -31,12 +33,35 @@ class Student{
 
 public class UniversityEnrollmentSystem{
         public static void main(String[] args){
-                Student s1 = new Student("Rahul", 80, 90, 39);
-                Student s2 = new Student("Kunal", 88, 92, 59);
-                Student s3 = new Student("Amul", 90, 50, 70);
-                s1.displayPerformance();
-                s2.displayPerformance();
-                s3.displayPerformance();
+                Scanner sc = new Scanner(System.in);
+
+                System.out.print("Enter number of students: ");
+                int n = sc.nextInt();
+                sc.nextLine();
+
+                for (int i = 1; i <= n; i++) {
+
+                        System.out.println("Enter details for student " + i);
+
+                        System.out.print("Enter student name: ");
+                        String name = sc.nextLine();
+
+                        System.out.print("Enter three test marks: ");
+
+                        int m1 = sc.nextInt();
+                        int m2 = sc.nextInt();
+                        int m3 = sc.nextInt();
+
+                        sc.nextLine();
+
+                         // MODIFIED: Object created using user input
+                         Student s = new Student(name, m1, m2, m3);
+
+                        // YOUR ORIGINAL non-static method
+                        s.displayPerformance();
+        }
                 Student.displayTotalEnrolled();
+
+                sc.close();
         }
 }
