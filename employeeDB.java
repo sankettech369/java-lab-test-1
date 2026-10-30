@@ -33,19 +33,22 @@ public class employeeDB{
         String name = sc.nextLine();
 
         System.out.print("Employee ID: ");
-        int id = Integer.parseInt(sc.nextLine());
+        int id = sc.nextInt();
+        sc.nextLine();
 
         System.out.print("Department: ");
         String dept = sc.nextLine();
 
         System.out.print("Age: ");
-        int age = Integer.parseInt(sc.nextLine());
+        int age = sc.nextInt();
+        sc.nextLine();
 
         System.out.print("Designation: ");
         String des = sc.nextLine();
 
         System.out.print("Salary: ");
-        double salary = Double.parseDouble(sc.nextLine());
+        double salary = sc.nextDouble();
+        sc.nextLine();
 
         e[i] = new employee(name, id, dept, age, des, salary);
 
