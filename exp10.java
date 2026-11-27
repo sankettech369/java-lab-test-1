@@ -1,17 +1,23 @@
+
 import java.util.Scanner;
 
 class exp10 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
+        // Accept main text and keyword from user
+        String text, key;
+
         System.out.print("Enter main text: ");
-        String text = sc.nextLine();
+        text = sc.nextLine();
 
         System.out.print("Enter keyword: ");
-        String key = sc.nextLine();
+        key = sc.nextLine();
 
         int choice;
 
+        // Repeat menu until user chooses Exit
         do {
             System.out.println("\n--- TEXT PROCESSING MENU ---");
             System.out.println("1. Display character at position");
@@ -26,6 +32,8 @@ class exp10 {
 
             switch (choice) {
 
+                // QUESTION 1: View character at chosen position
+                // charAt() returns the character at the given index
                 case 1:
                     System.out.print("Enter position: ");
                     int pos = sc.nextInt();
@@ -36,6 +44,8 @@ class exp10 {
                         System.out.println("Invalid position");
                     break;
 
+                // QUESTION 2: Compare main text and keyword
+                // compareTo() compares two strings alphabetically
                 case 2:
                     int result = text.compareTo(key);
 
@@ -47,6 +57,9 @@ class exp10 {
                         System.out.println("Keyword comes first alphabetically");
                     break;
 
+                // QUESTION 3: Search and replace keyword
+                // indexOf() finds the first occurrence of keyword
+                // replace() replaces all occurrences of keyword
                 case 3:
                     int index = text.indexOf(key);
 
@@ -63,6 +76,8 @@ class exp10 {
                     }
                     break;
 
+                // QUESTION 4: Extract a portion of text
+                // substring() extracts characters between start and end
                 case 4:
                     System.out.print("Enter start position: ");
                     int start = sc.nextInt();
@@ -77,6 +92,7 @@ class exp10 {
                         System.out.println("Invalid positions");
                     break;
 
+                // QUESTION 5: Exit the program
                 case 5:
                     System.out.println("Exiting program...");
                     break;
