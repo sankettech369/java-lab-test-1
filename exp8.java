@@ -15,7 +15,7 @@ class TooYounger extends Exception {
     }
 }
 
-class exp8 {
+public class exp8 {
 
     // Method to validate age eligibility
     static void validateAge(String name, int age)

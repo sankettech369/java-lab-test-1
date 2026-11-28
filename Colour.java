@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-class Colour extends JFrame implements ActionListener {
+public class Colour extends JFrame implements ActionListener {
 
     JCheckBox r, g, b;
     JLabel l;

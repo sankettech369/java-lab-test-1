@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-class exp10 {
+public class exp10 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

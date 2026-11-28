@@ -4,13 +4,13 @@ class Buffer {
     boolean flag = false;
 
     // synchronized put() method
-    synchronized void put(int n) throws InterruptedException {
+    synchronized void put(int data) throws InterruptedException {
 
         // wait() when buffer already contains a value
         while (flag)
             wait();
 
-        data = n;
+        this.data = data;
         System.out.println("Produced: " + data);
 
         flag = true;
@@ -69,7 +69,7 @@ class Consumer extends Thread {
 }
 
 // Main Class
-class exp9 {
+public class exp9 {
     public static void main(String[] args) {
 
         // Shared object
